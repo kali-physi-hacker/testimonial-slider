@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.bg-bottom-image {
+    position: absolute;
+    bottom: 0;      
+}
+
+.attribution { 
+    position: absolute;
+    padding: 0.4rem;
+    bottom: 0;
+    font-size: 11px; 
+    text-align: center;
+    width: 100%;
+
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+:root {
+--DarkBlue: hsl(240, 37%, 20%);
+--GrayishBlue: hsl(240, 18%, 77%);
+--DarkBlueOpacmd: hsla(240, 37%, 20%, 0.19);
+--DarkBlueOpaclg: hsla(240, 37%, 20%, 0.23);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.slider {
+    display: flex;
+    padding: 20px;
+    width: 1152px;
+    height: 565.2px;
+    position: relative;
+}
+
+.slider img.quote-img {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    z-index: -2;
+}
+
+.slider img.pattern-bg {
+    position: absolute;
+    z-index: -2;
+    right: -7%;
+    top: -8%;
+}
+
+.slider-item {
+    position: relative;
+    min-width: 1120px;
+    display: none;
+    transform: translateX(100%);
+    align-items: center;
+    height: 600px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slider-item.active {
+    display: flex;
+    transform: translateX(0%);
+}
+
+.slider-item p.para{
+    text-align: left;
+    width: 60%;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--DarkBlue);
+}
+
+.slider-item p.para .name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.slider-item p.para .position {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--GrayishBlue);
+}
+
+.slider-item img {
+    position: absolute;
+    top: 0;
+    right: 0;  
+    box-shadow: 0 0.25rem 0.5rem 0 var(--DarkBlueOpacmd);    
+    z-index: -1; 
+}
+
+div.navigation {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: -4%;
+    right: 35%;
+    width: 100px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 1rem 3rem 0 var(--DarkBlueOpaclg);   
+}
+
+div.navigation img {
+    z-index: 1;
+    top: 25%;
+    width: 10px;
+    height: auto;
+    cursor: pointer;
+}
